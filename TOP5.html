@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title>Partner Profile</title>
+
+	<script type="text/javascript">
+
+        	var image1 = new Image()
+        	image1.src = "mov1.jpg"
+
+        	var image2 = new Image()
+        	image2.src = "mov2.jpg"
+
+        	var image3 = new Image()
+        	image3.src = "mov3.jpg"
+
+        	var image4 = new Image()
+        	image4.src = "mov4.jpg"
+			
+			var image5 = new Image()
+        	image5.src = "mov5.jpg"
+
+    	</script>
+</head>
+<body>
+	<nav>
+            <h1>
+                <ul class="main_menu">
+                    <li><a href="HOME.html">Home</a></li>
+                    <li><a href="TOP5.html">Top 5 Movies</a></li>         
+                </ul>
+            </h1>
+        </nav> 
+        <center><img src="mov1.jpg" name="slideshow" alt="imageslideshow"></center>
+
+        <script type="text/javascript">
+            var numberImage = 1
+            function myslide() {
+                document.images.slideshow.src = eval("image" + numberImage + ".src")
+
+                if (numberImage < 5)
+                    numberImage = numberImage + 1
+
+                else
+                    numberImage = 1
+                setTimeout("myslide()", 2000)
+            }
+            myslide()
+        </script>     
+    </div>
+
+</body>
+</html>
